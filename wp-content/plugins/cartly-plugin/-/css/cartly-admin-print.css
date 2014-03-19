@@ -1,0 +1,20 @@
+/* $Print Styles
+--------------------------------------------- */
+#wpfooter,
+#adminmenuback,
+#adminmenuwrap,
+.cartly-order .header .controls,
+.product-image,
+.cartly-order .header h3 {
+	display: none;
+}
+.cartly-order .products .product.row {
+	padding: 5px 0;
+}
+.cartly-order .order-box .left {
+	margin-right: 20%;
+}
+#wpcontent,
+#wpfooter {
+	margin-left: 0;
+}

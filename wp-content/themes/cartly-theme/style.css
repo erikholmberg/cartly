@@ -1,0 +1,985 @@
+/* 
+Theme Name: Cartly
+Version: 1.0
+Author: Erik Holmberg
+Author URI: http://getcartly.com
+*/
+
+/* $Typography & Colors
+------------------------------------------------
+
+"Lato"		Regular (400) / Bold (700) / Ultra Bold (900)
+	
+blue	#424039
+green	#5cb76b
+											  */
+
+/* $Reset
+--------------------------------------------- */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ol, ul, li,fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* $Global
+--------------------------------------------- */
+body {	
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 62.5%;
+	line-height: 100%;
+	background: #FFF;
+	color: #26333e;
+	-webkit-text-size-adjust: none;
+	text-rendering: optimizeLegibility;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: 700;
+}
+img,
+embed,
+object,
+video {
+	max-width: 100%;
+}
+a {
+	outline: none;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+	color: #2172cc;
+}
+a:hover {
+	text-decoration: underline;
+}
+p,
+ol,
+ul {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1em;
+}
+h1 {
+	font-weight: 700;
+	font-size: 3.4em;
+}
+h2 {
+	font-size: 2.6em;
+	font-weight: 700;
+}
+h3 {
+	font-size: 2.2em;
+}
+h4 {
+	font-size: 1.8em;
+}
+h5 {
+	font-size: 1.4em;
+}
+h6 {
+	font-size: 1.2em;
+}
+label {
+	font-size: 1.4em;
+	font-weight: 700;
+}
+::selection {
+	background: #26333e;
+	color: #E5E5E5;
+}
+::-moz-selection {
+	background: #26333e;
+	color: #E5E5E5;
+}
+*:focus {
+	outline: none
+}
+.clear:before,
+.clear:after {
+    content: "";
+    display: table;
+}
+.clear:after {
+    clear: both;
+}
+.clear {
+    zoom:1;
+}
+::-webkit-input-placeholder {}
+:-moz-placeholder {}
+input[type=text],
+input[type=submit],
+input[type=email],
+input[type=password] {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+input[type=text],
+input[type=password],
+textarea {
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-size: 1.2em;
+	background: #eee;
+	color: #26333e;
+	padding: 8px 8px;
+	border: none;
+}
+input[type=text].error,
+input[type=password].error,
+textarea.error {
+	background-color: #eac4c4;
+}
+.initial-hide {
+	display: none;	
+}
+.page-content h2,
+.page-content h3 {
+	margin-bottom: 10px;
+}
+.page-content h4 {
+	margin-bottom: 20px;
+}
+.message {
+	font-size: 1.2em;
+	color: #26333e;	
+}
+.delete,
+.alert,
+.error,
+a:link.delete,
+a:visited.delete {
+	color: #e61414;	
+}
+label.error {
+	font-size: 1.2em;
+	line-height: 1.33em;
+	font-weight: normal;
+	margin-top: 5px;
+	display: inline-block;
+}
+.success {
+	color: #5cb76b;	
+}
+.page-content {
+	margin-bottom: 40px;	
+}
+table td.label {
+	width: 40%;
+}
+table td.input {
+	width: 60%;
+}
+label.checkbox,
+.checkbox {
+	padding-left: 20px;
+	display: block;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	font-weight: normal;
+	margin: 10px 0;
+}
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+	float: left;
+	margin: 2px 0 0 -20px;
+}
+.hero h2 {
+	font-size: 3em;
+	line-height: 1.3em;
+	margin-bottom: 40px;
+	font-weight: 400;
+	color: #888;
+}
+
+/* $Messages
+--------------------------------------------- */
+body > .message {
+	text-align: center;
+	font-size: .8em;
+	padding: 5px;
+	background: red;
+	color: #fff;
+}
+body > .message p {
+	margin-bottom: 0;
+}
+
+/* $Inputs
+--------------------------------------------- */
+button,
+input[type=submit] {
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	border: none;
+	background: #5cb76b;
+	color: #fff;
+	padding: 10px 15px;
+	min-width: 100px;
+}
+button:hover,
+input[type=submit]:hover {
+	cursor: pointer;
+	background: #459b53;
+}
+
+/* $Layout
+--------------------------------------------- */
+.tame {
+	width: 94%;
+	max-width: 992px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 0;
+}
+.span4 {
+	float: left;
+	width: 23%;
+	margin-right: 2.6666%;
+}
+.span4.last,
+.span4:last-child {
+	margin-right: 0;
+}
+.span8 {
+	float: left;
+	width: 47%;
+	margin-right: 5%;
+}
+.span8.last,
+.span8:last-child {
+	margin-right: 0;
+}
+	
+/* $Header
+--------------------------------------------- */
+.masthead {
+	padding: 30px 0;
+	margin-bottom: 20px;
+}
+.masthead h1 {
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	width: 50%;
+	float: left;
+	font-weight: 700;
+}
+.masthead h1 a:link,
+.masthead h1 a:visited {
+	color: #26333e;
+}
+.masthead h1 a:hover {
+	color: #444;
+	text-decoration: none;
+}
+
+/* $Site Navigation
+--------------------------------------------- */
+.site-nav {
+	position: absolute;
+	top: 25px;
+	right: 0;
+}
+.site-nav li {
+	display: inline-block;
+	padding: 10px 0 10px 20px;
+}
+
+/* $Footer
+--------------------------------------------- */
+* {
+	margin: 0;
+}
+html,
+body {
+	height: 100%;
+}
+.wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -50px;
+}
+.site-footer,
+.push {
+	height: 50px;
+}
+.site-footer {
+	color: #aaa;
+}
+.site-footer p {
+	font-size: 1.2em;
+	line-height: 50px;
+}
+
+/* $Product List
+--------------------------------------------- */
+.products h2,
+.products h3 {
+	margin-bottom: 10px;
+}
+.product p {
+	color: #444;
+}
+.product.small p {
+	font-size: 1.3em;	
+	margin-bottom: 10px;
+}
+.product.small h2 {
+	font-size: 1.8em;
+	margin: 10px 0;
+}
+.product.small h5 {
+	font-size: 1.6em;
+}
+.product-category {
+	margin-bottom: 40px;
+}
+
+/* $Single Product
+--------------------------------------------- */
+.product.large h5 {
+	font-size: 2em;
+	margin-bottom: 40px;
+}
+.product-options {
+	margin-bottom: 20px;	
+}
+.product.large input[type=text] {
+	width: 90px;
+	margin: 0 5px 20px 0;
+}
+.product.large p.message {
+	margin-top: 20px;
+	color: #26333e;
+}
+.product.large h5 span.alert {
+	display: block;
+	margin-top: 10px;
+}
+.product img.featured {
+	width: 100%;
+}
+.product .thumbs .thumb-link {
+	display: block;
+	float: left;
+	width: 24.138%;
+	margin: 1% 1.33333% .2% 0;
+}
+.product .thumbs .thumb-link.last {
+	margin-right: 0;
+}
+
+/* $Cart
+--------------------------------------------- */
+.shopping-cart .row.header {
+	margin: 40px 0 0 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.shopping-cart .product.row {
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+}
+.shopping-cart .product-info {
+	width: 30%;
+	margin-right: 5%;
+	float: left;
+}
+.shopping-cart .product-image {
+	width: 20%;
+	margin-right: 5%;
+	float: left;
+}
+.shopping-cart .product-price {
+	width: 10%;
+	margin-right: 5%;
+	float: left;
+}
+.shopping-cart .product-quantity {
+	width: 25%;
+	margin-right: 5%;
+	float: left;
+}
+.shopping-cart .product-total-price {
+	width: 10%;
+	float: left;
+}
+.shopping-cart .product-remove {
+	width: 10%;
+	float: left;
+	text-align: right;
+}
+.shopping-cart .row.footer {
+	padding-top: 20px;
+}
+.shopping-cart h4 {
+	font-size: 2em;
+	margin-bottom: 5px;
+}
+.shopping-cart h5 {
+	font-size: 1.4em;
+	margin-bottom: 5px;
+	color: #888;
+}
+.shopping-cart h6 {
+	font-size: 1.2em;
+}
+.shopping-cart h6.error {
+	display: none;
+}
+.shopping-cart .row.error {
+	background-color: #fde8e9;
+}
+.shopping-cart .row.error h6.error {
+	display: block;
+}
+.shopping-cart input[type=text],
+.shopping-cart input[type=password],
+.shopping-cart textarea {
+	width: 80px;
+	margin-right: 5px;
+	float: left;
+	padding: 11px 10px;
+}
+.shopping-cart p {
+	color: #26333e;
+	margin-bottom: 0;
+}
+.shopping-cart label.error {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	font-weight: normal;
+	margin: 5px 0 0 0;
+	display: block;
+	float: left;
+}
+.totals-table {
+	float: right;
+	font-size: 1.4em;
+	text-align: right;
+}
+.totals-table .total {
+	font-weight: 700;
+}
+.totals-table td {
+	padding: 5px 0 5px 20px;
+}
+section.checkout {
+	margin: 20px 0 0 0;
+}
+section.checkout .left {
+	width: 30%;
+	float: left;	
+}
+section.checkout .middle,
+section.checkout .right {
+	width: 30%;
+	float: left;	
+	margin-left: 5%;
+}
+section.checkout select {
+	max-width: 146px;	
+}
+section.checkout table {
+	width: 100%;
+}
+section.checkout table td {
+	padding: 5px 0;
+}
+section.checkout .checkout-steps {
+	margin-top: 40px;	
+}
+section.checkout .order-button {
+	margin-top: 40px;
+}
+section.checkout .credit-card select {
+	margin-right: 5px;	
+}
+section.checkout p.error,
+section.checkout p.success {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	font-weight: normal;
+	margin: 20px 0 0 0;
+}
+.item-removed {
+	margin-bottom: 60px;
+}
+section.checkout img.loading {
+	width: 100px;
+	margin: 10px 0;
+	display: none;
+}
+
+/* $Order Page
+--------------------------------------------- */
+section.order .row.footer .left {
+	width: 20%;
+	margin-right: 5%;
+	float: left;
+}
+section.order .row.footer .left p {
+	font-size: 1.6em;
+}
+section.order .row.footer .right {
+	width: 50%;
+	float: left;
+}
+section.order .row.footer h4 {
+	font-size: 1.8em;
+	font-weight: 700;
+}
+section.order .totals-table {
+	float: none;
+}
+
+/* $Log In / Register
+--------------------------------------------- */
+section.log-in-register .left,
+section.log-in-register .right {
+	width: 45%;
+	float: left;
+}
+section.log-in-register .left {
+	margin-right: 10%;
+}
+section.log-in-register table {
+	width: 100%;
+}
+section.log-in-register table td {
+	padding: 5px 0;
+}
+section.log-in-register .log-in .checkbox {
+	display: inline-block;	
+}
+section.log-in-register .log-in .forgot-password {
+	padding-top: 20px;
+}
+section.log-in-register .log-in label .forgot-password-link {
+	font-size: .9em;
+	font-weight: normal;
+}
+section.log-in-register .log-in-error {
+	margin: 10px 0 0 0;
+	font-size: 1.2em;
+}
+section.log-in-register .reset-password p,
+section.log-in-register p.reset-message {
+	font-size: 1.2em;	
+}
+section.log-in-register label.error,
+section.log-in-register p.error {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-top: 5px;
+	display: block;
+}
+section.log-in-register input[type=text],
+section.log-in-register input[type=password] {
+	width: 170px;
+}
+
+/* $Password Reset
+--------------------------------------------- */
+section.password-reset table td {
+	padding: 5px 0;
+}
+
+/* $Account
+--------------------------------------------- */
+section.account .orders .row .date {
+	width: 18%;
+	margin-right: 3%;
+	float: left;
+}
+section.account .orders .row .order-number {
+	width: 11%;
+	margin-right: 3%;
+	float: left;
+}
+section.account .orders .row .items {
+	width: 6%;
+	margin-right: 3%;
+	float: left;
+}
+section.account .orders .row .total {
+	width: 8%;
+	margin-right: 3%;
+	float: left;
+}
+section.account .orders .row .status {
+	width: 8%;
+	margin-right: 3%;
+	float: left;
+}
+section.account .orders .row .images {
+	width: 29%;
+	margin-right: 5%;
+	float: left;
+}
+section.account .orders .row .images img {
+	width: 12%;
+	height: auto;
+	float: left;
+	margin-right: 5px;
+	min-width: 40px;
+}
+section.account .orders .row.header {
+	margin: 40px 0 0 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+section.account .orders p {
+	margin-bottom: 0;
+	line-height: 40px;
+}
+section.account .row.order {
+	padding: 5px 0;
+	border-bottom: 1px solid #eee;
+}
+
+/* $Error 404
+--------------------------------------------- */
+.error404 .page-content {
+	text-align: center;
+	}
+.error404 .page-content h1 {
+	margin-bottom: 10px;
+	}
+
+/* $Responsive Support
+--------------------------------------------- */
+@media only screen and (max-width: 768px) {
+	
+	/* $Cart
+	--------------------------------------------- */
+	.shopping-cart input[type="text"] {
+		margin-bottom: 5px;
+	}
+	section.checkout .left {
+		width: 45%;
+		margin-right: 5%;
+	}
+	section.checkout .middle,
+	section.checkout .right {
+		width: 50%;
+		margin: 0;
+	}
+	section.checkout .middle {
+		margin-bottom: 40px;
+	}
+	
+	/* $Order
+	--------------------------------------------- */
+	section.order .row.footer .left {
+		width: 35%;
+		margin-right: 5%;
+		float: left;
+	}
+	section.order .row.footer .right {
+		width: 60%;
+		float: right;
+	}
+	section.order .totals-table {
+		float: right;
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	/* $Global
+	--------------------------------------------- */
+	h2 {
+		font-size: 2em;
+	}
+	h3 {
+		font-size: 1.8em;
+	}
+	.span4 {
+		float: left;
+		width: 100%;
+		margin-right: 0;
+	}
+	.span8 {
+		float: none;
+		width: 100%;
+		margin-right: 0;
+	}
+	.mobile-hide {
+		display: none;
+	}
+	button,
+	input[type=submit] {
+		min-width: inherit;
+	}
+	
+	/* $Home
+	--------------------------------------------- */
+	.masthead {
+		padding-bottom: 0;
+		margin-bottom: 10px;
+	}
+	.masthead h1 {
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin: 30px auto 20px;
+		font-size: 2.2em;
+	}
+	.site-nav {
+		top: 0;
+		text-align: center;
+	}
+	.site-nav li {
+		display: inline-block;
+	}
+	.product {
+		margin-bottom: 30px;
+	}
+	.page-id-2 .product .featured {
+		width: 25%;
+		float: left;
+		margin-right: 5%;
+	}
+	.page-id-2 .product .product-footer {
+		width: 70%;
+		float: right;
+	}
+	.hero h2 {
+		font-size: 1.6em;
+		margin-bottom: 30px;
+	}
+	.product.small h2 {
+		margin-top: 0;
+		font-size: 1.4em;
+		margin-bottom: 5px;
+	}
+	.product.small h5 {
+		font-size: 1.2em;
+	}
+	.product-category {
+		margin-bottom: 20px;
+	}
+	
+	/* $Log In / Register
+	--------------------------------------------- */
+	section.log-in-register .left,
+	section.log-in-register .right {
+		width: 100%;
+		float: none;
+		margin: 0%;
+	}
+	
+	/* $Product Page
+	--------------------------------------------- */
+	.product img.featured {
+		width: 69%;
+		margin-right: .2%;
+		float: left;
+	}
+	.product .thumbs {
+		width: 30.8%;
+		float: right;
+	}
+	.product .thumbs .thumb-link {
+		width: 48%;
+		margin: .3% 2% .2% 0;
+	}
+	.product .product-images {
+		margin-bottom: 20px;
+	}
+	
+	/* $Cart
+	--------------------------------------------- */
+	section.checkout .left,
+	section.checkout .middle,
+	section.checkout .right {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+	section.checkout label {
+		font-size: 1.2em;
+	}
+	section.checkout table td.input {
+		text-align: right;
+	}
+	section.checkout .credit-card select {
+		margin-left: 5px;
+		margin-right: 0;
+	}
+	.shopping-cart .totals-table {
+		float: right;
+		font-size: 1.2em;
+	}
+	section.checkout .left {
+		margin-bottom: 20px;
+	}
+	section.checkout .middle {
+		margin-bottom: 40px;
+	}
+	section.checkout {
+		margin: 40px 0 0 0;
+	}
+	.shopping-cart .product-image {
+		width: 100%;
+		margin-right: 5%;
+		margin-bottom: 5px;
+		float: left;
+	}
+	.shopping-cart .product-info {
+		width: 30%;
+		margin-right: 5%;
+		float: left;
+	}
+	.shopping-cart .product-price {
+		width: 22%;
+		margin-right: 5%;
+		float: left;
+	}
+	.shopping-cart h4 {
+		font-size: 1.2em;
+		margin-bottom: 5px;
+	}
+	.shopping-cart h5 {
+		font-size: 1.2em;
+		margin-bottom: 0;
+	}
+	section.account label,
+	section.account .orders p {
+		font-size: 1.2em;
+	}
+	section.account .orders .row .date {
+		width: 27%;
+	}
+	section.account .orders .row .order-number {
+		width: 17%;
+	}
+	section.account .orders .row .items {
+		width: 12%;
+	}
+	section.account .orders .row .total {
+		width: 15%;
+	}
+	section.account .orders p {
+		line-height: 30px;
+	}
+	section.account .orders .row .images {
+		display: none;
+	}
+	section.checkout .order-button {
+		text-align: right;
+	}
+	section.checkout p.error,
+	section.checkout p.success {
+		text-align: center;
+	}
+	.shopping-cart input[type="text"] {
+		width: 49px;
+		padding: 7px 5px;
+		margin-bottom: 5px;
+	}
+	.shopping-cart button,
+	.shopping-cart input[type="submit"] {
+		font-size: 1.2em;
+		padding: 8px 10px;
+	}
+	.shopping-cart .product-quantity {
+		width: 25%;
+	}
+	.shopping-cart .product.row .product-remove {
+		width: 10%;
+		float: left;
+		text-align: right;
+		position: absolute;
+		bottom: 12px;
+		right: 5%;
+	}
+	
+	/* $Order
+	--------------------------------------------- */
+	.shopping-cart label,
+	section.order .orders p,
+	.shopping-cart p {
+		font-size: 1.2em;
+	}
+	.shopping-cart .product-info {
+		width: 23%;
+		margin-right: 5%;
+		float: left;
+	}
+	.shopping-cart .product-quantity {
+		width: 22%;
+		margin-right: 5%;
+		float: left;
+	}
+	.shopping-cart .product.row {
+		margin-bottom: 0;
+		position: relative;
+	}
+	section.order .row.footer .left p {
+		font-size: 1.2em;
+	}
+	section.order .row.footer h4 {
+		font-size: 1.4em;
+		font-weight: 700;
+	}
+	.totals-table td {
+		padding: 3px 0 3px 10px;
+	}
+}
+	
+/* $HD Support
+--------------------------------------------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (-moz-min-device-pixel-ratio: 2),
+       only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (min-device-pixel-ratio: 2) {
+}

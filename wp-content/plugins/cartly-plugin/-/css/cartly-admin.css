@@ -1,0 +1,312 @@
+/* $Global
+--------------------------------------------- */
+small {
+	font-size: 11px;
+}
+.initial-hide {
+	display: none;
+}
+.clear:before,
+.clear:after {
+    content: "";
+    display: table;
+}
+.clear:after {
+    clear: both;
+}
+.clear {
+    zoom:1;
+}
+.cartly-admin a:link,
+.cartly-admin a:visited {
+	color: #4290b2;
+	text-decoration: none;
+}
+.cartly-admin a:hover {
+	text-decoration: underline;
+}
+.cartly-admin a.delete:link,
+.cartly-admin a.delete:visited {
+	color: #f00;
+	border-bottom-color: #f00;
+	padding: 1px 2px;
+	text-decoration: none;
+	border-bottom: 1px solid #f00;
+}
+.cartly-admin a.delete:hover {
+	color: #fff;
+	background-color: #f00;
+	border-bottom-color: #f00;
+	text-decoration: none;
+}
+.cartly-admin h3 {
+	margin: 0 0 1em 0;	
+}
+.cartly-table .options a:link,
+.cartly-table .options a:visited {
+	margin-left: 5px;	
+}
+.cartly-table .option-label {
+	padding-left: 5px;
+}
+.cartly-table .note {
+	color: #888;	
+}
+.cartly-table {
+	margin-bottom: 30px;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	background-color: #f9f9f9;
+}
+.cartly-table th {
+	text-align: left;
+	padding-right: 10px;
+	vertical-align: middle;
+	background: #26333e;
+	color: #fff;
+}
+.cartly-table td,
+.cartly-table th {
+	padding: 8px 10px;
+}
+.cartly-table input[type=checkbox] {
+	margin-right: 4px;
+}
+.icon-sprocket {
+	background-position: -710px -5px !important;
+}
+.cartly-table input[type=text].medium-text {
+	width: 110px;
+}
+.cartly-table input[type=text].small-text {
+	width: 70px;
+}
+.cartly-table tr td {
+}
+.cartly-table tr.even td {
+	background-color: #f9f9f9
+}
+.cartly-table tr.error td,
+.cartly-table tr.received td {
+	color: #e74c3c;
+}
+.cartly-table tr.warning td,
+.cartly-table tr.processing td {
+	color: #e67e22;
+}
+.cartly-table tr.success td,
+.cartly-table tr.shipped td {
+	color: #27ad60;
+}
+.cartly-table.status-table td,
+.cartly-table.status-table th {
+	padding: 5px 10px;
+}
+.received {
+	color: #e74c3c;
+}
+.processing {
+	color: #e67e22;
+}
+.shipped {
+	color: #27ad60;
+}
+.wrap .add-new-h2:link,
+.wrap .add-new-h2:visited {
+	margin-left: 0px;
+	padding: 4px 8px 5px;
+	position: relative;
+	top: 0px;
+	text-decoration: none;
+	font-size: 12px;
+	border: 0 none;
+	color: #4290b2;
+}
+.wrap .add-new-h2:hover {
+	background: #e1e1e1;
+}
+input[type=text].error {
+	border-color: #e74c3c;
+}
+
+/* $Single Product
+--------------------------------------------- */
+.cartly-table.product-table {
+	margin-top: 12px;
+	margin-bottom: 0;
+	padding: 10px 0;
+}
+.cartly-table.product-table tr td {
+	border-bottom: none;
+	padding: 4px 10px;
+}
+.cartly-table.product-table td.metabox_label_column,
+.cartly-table.product-table .options-label {
+	font-weight: bold;
+}
+
+/* $Orders
+--------------------------------------------- */
+.cartly-orders .header h3 {
+	margin: 1em 0;
+}
+.orders-table .status-meta span {
+	display: inline-block;
+	min-width: 80px;
+}
+
+/* $Single Order
+--------------------------------------------- */
+.cartly-order .header {
+	position: relative;
+	margin-bottom: 20px;
+}
+.cartly-order .header .controls {
+	margin: 20px 0;
+	width: 46%;
+}
+.cartly-order .header .controls a:link,
+.cartly-order .header .controls a:visited {
+	display: inline-block;
+	min-width: 60px;
+	text-align: center;
+	margin-left: 0;
+	margin-right: 5px;
+}
+.cartly-order .header .controls a:hover {
+	text-decoration: none;
+}
+.cartly-order .header .controls a.print-link:link,
+.cartly-order .header .controls a.print-link:visited {
+	float: right;
+	padding: 4px 8px 5px;
+}
+.cartly-order .header .controls a.print-link:hover {
+	text-decoration: underline;
+}
+.cartly-order .order-box .top h2,
+.cartly-order .products h2 {
+	font-size: 1.4em;
+}
+.cartly-order .order-box .top {
+	margin-bottom: 30px;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+}
+.cartly-order .order-box p {
+	margin: 0;
+	line-height: 1.4em;
+}
+.cartly-order .order-box .left {
+	min-width: 20%;
+	float: left;
+	margin-right: 5%;
+}
+.cartly-order .order-box .left p {
+	font-size: 1.4em;
+}
+.cartly-order .order-box .right {
+	min-width: 18%;
+	float: left;
+}
+.cartly-order .products-header {
+	padding: 8px 10px;
+	background: #26333e;
+	color: #fff;
+}
+.cartly-order .products-header p {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.cartly-order .products {
+	margin-bottom: 30px;
+}
+.cartly-order .products .product-info {
+	width: 25%;
+	float: left;
+}
+.cartly-order .products .product.row {
+	padding: 10px 10px 6px;
+}
+.cartly-order .products .product.row.even {
+	background-color: #f9f9f9
+}
+.cartly-order .products .product.row h2 {
+	padding: 0;
+	line-height: 1.3em;
+	text-shadow: none;
+	font-weight: normal;
+}
+.cartly-order .products .product.row h3 {
+	color: #888;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+.cartly-order .products .product .product-image {
+	width: 25%;
+	margin-right: 5%;
+	float: left;
+}
+.cartly-order .products .product .product-image img {
+	max-width: 100%;
+}
+.cartly-order .products .product-quantity {
+	width: 10%;
+	margin-right: 5%;
+	float: left;
+}
+.cartly-order .products .product-total {
+	width: 20%;
+	float: left;
+}
+.cartly-order .order-total {
+	margin-top: 20px;
+	background: #f4f4f4;
+	padding: 10px;
+	display: inline-block;
+}
+.cartly-order .order-total td {
+	padding: 2px 20px 2px 0px;
+	text-align: right;
+}
+
+/* $Option Sets
+--------------------------------------------- */
+.option-set-form {
+	margin-bottom: 40px;
+}
+.option-set-form input[name="option_set_name"] {
+	float: left;
+	margin-right: 5px;
+}
+.option-set-form a.add-option-set {
+	float: left;
+	margin-top: 1px;
+}
+.option-sets .set {
+	width: 60%;
+	max-width: 440px;
+	position: relative;
+}
+.option-sets .set .delete-option-set {
+	position: absolute;
+	right: 0;
+	top: 15px;
+	display: none;
+}
+.option-sets .set:hover .delete-option-set {
+	display: block;
+}
+.option-set-table {
+	width: 100%;
+}
+.cartly-table.option-set-table td,
+.cartly-table.option-set-table th {
+	padding-right: 10px;
+}
+
+/* $Cartly Settings
+--------------------------------------------- */
+.cartly-settings .form-table {
+	margin-bottom: 30px;
+}
