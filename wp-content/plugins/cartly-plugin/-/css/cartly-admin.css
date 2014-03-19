@@ -56,7 +56,6 @@ small {
 	margin-bottom: 30px;
 	background: #fff;
 	border: 1px solid #e5e5e5;
-	background-color: #f9f9f9;
 }
 .cartly-table th {
 	text-align: left;
@@ -135,6 +134,7 @@ input[type=text].error {
 	margin-top: 12px;
 	margin-bottom: 0;
 	padding: 10px 0;
+	background-color: #f9f9f9;
 }
 .cartly-table.product-table tr td {
 	border-bottom: none;
