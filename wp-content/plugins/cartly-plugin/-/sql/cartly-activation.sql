@@ -28,12 +28,15 @@ CREATE TABLE `cartly_address` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cartly_cart`
+-- Table structure for table `cartly_user_cart`
 --
 
-CREATE TABLE `cartly_cart` (
+CREATE TABLE `cartly_user_cart` (
   `user_id` int(11) NOT NULL,
-  `cart_data` text NOT NULL
+  `cart_data` text NOT NULL,
+  `create_date` datetime NOT NULL,
+  `update_date` datetime NOT NULL,
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------

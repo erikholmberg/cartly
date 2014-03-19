@@ -75,13 +75,13 @@ else
 						</div>
 					</div>
 					<div class="product-price">
-							<p><?php echo Utilities::PrintMoney($orderItem->total) ?></p>
+							<p><?php echo Utilities::PrintMoney($orderItem->total / $orderItem->quantity) ?></p>
 					</div>
 					<div class="product-quantity">
 						<p><?php echo $orderItem->quantity; ?></p>
 					</div>
 					<div class="product-total-price" data-product-id="<?php echo $product->ID ?>">				
-						<p><?php echo Utilities::PrintMoney($orderItem->total * $orderItem->quantity) ?></p>
+						<p><?php echo Utilities::PrintMoney($orderItem->total) ?></p>
 					</div>
 				</div>
 				<?php endforeach; ?>

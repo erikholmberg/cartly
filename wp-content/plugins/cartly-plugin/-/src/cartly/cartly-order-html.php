@@ -38,11 +38,14 @@ $orderNumber = isset($order->id) ? '#1000'.$order->id : '';
 				<div class="product-info">
 					<p>Product</p>
 				</div>
+				<div class="product-price">
+					<p>Item Price</p>
+				</div>
 				<div class="product-quantity">
 					<p>Quantity</p>
 				</div>
 				<div class="product-total">
-					<p>Price</p>
+					<p>Total</p>
 				</div>
 			
 			</div>
@@ -66,6 +69,9 @@ $orderNumber = isset($order->id) ? '#1000'.$order->id : '';
 						<h2><a href="<?php echo get_permalink($orderItem->product_id) ?>"><?php echo $image_info->post_title ?></a></h2>
 						<h3><?php echo $orderItem->option_value ?></h3>
 					</div>
+				</div>
+				<div class="product-price">
+					<h2><?php echo CartlyUtilities::PrintMoney($orderItem->total / $orderItem->quantity) ?></h2>
 				</div>
 				<div class="product-quantity">
 					<h2><?php echo $orderItem->quantity ?></h2>

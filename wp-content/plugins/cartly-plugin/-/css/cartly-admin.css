@@ -239,6 +239,7 @@ input[type=text].error {
 }
 .cartly-order .products .product.row h3 {
 	color: #888;
+	font-size: 1.1em;
 	font-weight: normal;
 	margin-bottom: 0;
 }
@@ -255,8 +256,12 @@ input[type=text].error {
 	margin-right: 5%;
 	float: left;
 }
+.cartly-order .products .product-price {
+	width: 15%;
+	float: left;
+}
 .cartly-order .products .product-total {
-	width: 20%;
+	width: 10%;
 	float: left;
 }
 .cartly-order .order-total {

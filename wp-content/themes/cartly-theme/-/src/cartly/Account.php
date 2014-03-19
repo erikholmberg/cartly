@@ -297,6 +297,27 @@ class Account
 		}
 	}
 	
+	public function GetUserCart($userId)
+	{
+		$cart = '';
+		
+		if (!empty($userId))
+		{
+			$sql = "SELECT * FROM cartly_user_cart WHERE user_id = $userId LIMIT 1";
+		
+			$carts = Data::GetResultsObject($sql);
+		
+			$cart = empty($carts) ? '' : $carts[0]->cart_data;
+		}
+		
+		return $cart;
+	}
+	
+	public function SetUserCart($userId, $cart)
+	{
+		
+	}
+	
 	// Private Methods
 	private function Authorize($email, $password, $userId)
 	{	
