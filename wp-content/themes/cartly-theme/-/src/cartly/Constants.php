@@ -1,5 +1,5 @@
 <?php
 
-define('CARTLY_AUTH_KEY', 'fqID833R440C49H');
+define('CARTLY_AUTH_KEY', 'W6138l8iY965399vL1wB');
 
 ?>
