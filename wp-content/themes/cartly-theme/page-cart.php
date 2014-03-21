@@ -139,7 +139,7 @@ if ($cartlyPluginActive)
 						</tr>
 						<tr>
 							<td colspan="4" class="accounting total">Grand Total:</td>
-							<td class="grand total"><?php echo Utilities::PrintMoney($cart->cartTotal + $cart->cartShipping) ?></td>
+							<td class="grand total"><?php echo Utilities::PrintMoney($cart->cartTotal + $cart->cartShipping + $cart->cartTax) ?></td>
 						</tr>
 					</table>
 				</div>

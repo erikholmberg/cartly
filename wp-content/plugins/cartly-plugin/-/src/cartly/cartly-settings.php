@@ -14,6 +14,7 @@ if (!class_exists('CartlySettings'))
         {
         	register_setting('cartly-option-group', 'cartly_new_order_email');
         	register_setting('cartly-option-group', 'cartly_sales_tax_percentage');
+        	register_setting('cartly-option-group', 'cartly_minimum_shipping');
         	register_setting('cartly-option-group', 'cartly_free_shipping');
         	register_setting('cartly-option-group', 'cartly_track_inventory');
         	register_setting('cartly-option-group', 'cartly_remove_add_to_cart');
@@ -54,6 +55,19 @@ if (!class_exists('CartlySettings'))
                 array(
                     'field' => 'cartly_sales_tax_percentage',
                     'placeholder' => 'e.g. 7.5',
+                    'class' => 'regular-text'
+                )
+            );
+            
+            add_settings_field(
+                'cartly-minimum-shipping', 
+                'Minimum Shipping', 
+                array(&$this, 'settings_field_input_text'), 
+                'cartly', 
+                'cartly-section',
+                array(
+                    'field' => 'cartly_minimum_shipping',
+                    'placeholder' => 'e.g. 10.00',
                     'class' => 'regular-text'
                 )
             );

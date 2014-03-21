@@ -2,7 +2,7 @@
 
 class Encryption
 {
-	private static $textKey = '(g&0C;7}UQoqYqf3|}Z-%^Y(8*Y;pgsg.@jGrb}K|r(]Y.HTzDhu-x>+QCE_';
+	private static $textKey = '(g&0C;7}UQoqIon7|}Z-%^Y(8*Y;pgsg.@jGrb}K|r(]Y.Hhu-x>+QCE_';
 	private static $cipher = MCRYPT_RIJNDAEL_256;
 	private static $cipherMode = MCRYPT_MODE_ECB;
 	private static $cipherRandom = MCRYPT_RAND;

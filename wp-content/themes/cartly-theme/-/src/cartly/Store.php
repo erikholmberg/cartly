@@ -90,15 +90,19 @@ class Store
 		}
 		
 		// Calculate Shipping
+		$minimumShipping = get_option('cartly_minimum_shipping');
 		$freeShipping = get_option('cartly_free_shipping');
 		
-		if (empty($freeShipping))
+		if (!empty($freeShipping))
 		{
-			$cartShipping = number_format(floatval($shipping), 2);
+			$cartShipping = 0.00;
 		}
 		else
 		{
-			$cartShipping = 0.00;
+			$productShipping = number_format(floatval($shipping), 2);
+			$minimumShipping = number_format(floatval($minimumShipping), 2);
+			
+			$cartShipping = $minimumShipping > $productShipping ? $minimumShipping : $productShipping;
 		}
 		
 		// Calculate Sales Tax
