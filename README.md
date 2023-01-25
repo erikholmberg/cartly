@@ -1,9 +1,7 @@
-# Project Title
+# Cartly
 
-Simple overview of use/purpose.
+The new way to add E-Commerce to Wordpress.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
-
-## Getting Started
+Cartly is a plugin that turns your WordPress site into an easy to use E-Commerce store. It also includes a responsive HTML5 theme so you can sell on any device.
