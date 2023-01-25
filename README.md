@@ -1,6 +1,6 @@
 # Cartly
 
-Empowering makers... The new way to add E-Commerce to WordPress.
+Empowering makers — The new way to add E-Commerce to WordPress.
 
 ## Description
 
