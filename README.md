@@ -1,6 +1,6 @@
 # Cartly
 
-The new way to add E-Commerce to Wordpress.
+Empowering makers... The new way to add E-Commerce to WordPress.
 
 ## Description
 
